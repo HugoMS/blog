@@ -1,0 +1,29 @@
+ <usuario>
+ <nombre>Be</nombre>
+   <nombres>Go</nombres>
+   <apellido>aaaa</apellido>
+   <apellidos>Gi</apellidos>
+   <email>fl@hotmail.com</email>
+   <nick>fti</nick>
+   <pais>Vez</pais>
+   <biografia>sarrollo</biografia>
+   <sexo>M</sexo>
+   <fecha>2/12/1990</fecha>
+   <foto>fto</foto>
+   <clave>1234</clave>
+</usuario>
+
+
+
+
+<comentario>
+	<texto>programando ando</texto>
+	<privacidad>0</privacidad>
+	<id_u>1</id_u>
+	<padre>0</padre>
+	<tag>
+		<tag1>segundoTag</tag1>
+		<tag2>segundoTag</tag2>
+	</tag>
+</comentario>
+

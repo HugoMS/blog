@@ -1,0 +1,65 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Map static resources from the /public folder to the /assets URL path
+GET /assets/*file controllers.Assets.at(path="/public", file)
+
+
+#index
+GET /blog  controllers.Usuario.index()
+
+
+
+
+#listar usuario
+GET /blog/usuario/list controllers.Usuario.listar()
+
+#insertar usuarios
+POST /blog/usuario/insertar controllers.Usuario.insertar()
+
+#eliminar Usuario
+DELETE	/blog/usuario/eliminar/:nick controllers.Usuario.eliminarUsuario(nick)
+
+#modificar Usuario
+PUT	/blog/usuario/modificar/:token 	controllers.Usuario.modificarUsuario(token)
+ 
+#validar Usuario
+POST /blog/usuario/validar controllers.Usuario.validarUsuario()
+ 
+# un Usuario jajajajaa
+GET	/blog/usuario/unico/:nick controllers.Usuario.especifico(nick)
+
+
+
+
+
+
+
+
+#insertar Comentario
+POST /blog/comentario/insertar/:token  controllers.Comentario.insertarComentario(token)
+
+#listar todos Comentarios
+GET /blog/comentario/listart  controllers.Comentario.listart()     
+
+#listar Comentarios especificos
+GET /blog/comentario/listar/:token  controllers.Comentario.listarcomentarios(token)          
+
+#hace like comentario
+POST /blog/comentario/like/:token controllers.Comentario.darLike(token)          
+
+#eliminar comentario
+DELETE /blog/comentario/eliminar/:nick/:id_c/:token controllers.Comentario.eliminarComentarios(token,id_c,nick)
+
+#listar Comentario por Usuario
+GET /blog/comentario/listaru/:nick  controllers.Comentario.listarcomentariosUsuario(nick) 
+
+#Insertar a Comentario Tag
+POST /blog/comentario/tag/:token controllers.Comentario.insertarComentariotag(token) 
+
+#Listar Comentarios por Tags
+GET  /blog/comentario/listar/tag/:tags     controllers.Comentario.listartags(tags) 
+
+#Insertar Comentario con Adjunto
+POST	/blog/comentario/insertarAdjunto/	controllers.Comentario.upload()
